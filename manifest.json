@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Getter!",
+  "version": "1.0",
+  "description": "Description of your extension",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "cookies",
+    "clipboardWrite",
+    "clipboardRead",
+    "webNavigation",
+    "webRequest",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/icons/happy-cookie.png",
+      "48": "assets/icons/happy-cookie.png",
+      "128": "assets/icons/happy-cookie.png"
+    },
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "assets/icons/happy-cookie.png",
+    "48": "assets/icons/happy-cookie.png",
+    "128": "assets/icons/happy-cookie.png"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "blocking_rules",
+        "enabled": true,
+        "path": "blockingRules.json"
+      }
+    ]
+  },
+  "content_security_policy": {
+    "script-src": ["self", "http://localhost:35729"]
+  }
+}
